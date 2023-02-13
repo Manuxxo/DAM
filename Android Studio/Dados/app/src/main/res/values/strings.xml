@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Exam Unit 1</string>
+    <string name="selectedlanguage">English</string>
+    <string name="language">Exam Unit 1</string>
+    <string name="btnLanzar">Launch</string>
+    <string name="txtResultado"> </string>
+    <string name="hintEntradaNombre">Your name here </string>
+
+
+</resources>

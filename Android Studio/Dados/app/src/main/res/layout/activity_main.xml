@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/txtEntradaNombre"
+        android:layout_width="245dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="75dp"
+        android:ems="10"
+        android:hint="@string/hintEntradaNombre"
+        android:inputType="textPersonName"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/txtEntradaNombre"
+        app:layout_constraintEnd_toEndOf="@+id/txtEntradaNombre"
+        app:layout_constraintStart_toStartOf="@+id/txtEntradaNombre"
+        app:layout_constraintTop_toTopOf="@+id/txtEntradaNombre" />
+
+    <ToggleButton
+        android:id="@+id/tbtnActivar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="Start"
+        android:textOff="START"
+        android:textOn="STOP"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/txtEntradaNombre"
+        app:layout_constraintStart_toEndOf="@+id/txtEntradaNombre" />
+
+    <SeekBar
+        android:id="@+id/barraFuerza"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="233dp"
+        android:layout_height="17dp"
+        android:layout_marginTop="138dp"
+        android:max="10"
+        android:progress="3"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/txtEntradaNombre"
+        app:layout_constraintStart_toStartOf="@+id/txtEntradaNombre"
+        app:layout_constraintTop_toTopOf="@+id/txtEntradaNombre" />
+
+    <Button
+        android:id="@+id/btnLanzar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnLanzar"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/barraFuerza"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/barraFuerza"
+        app:layout_constraintTop_toTopOf="@+id/barraFuerza" />
+
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="562dp"
+        android:isScrollContainer="true"
+        android:scrollbars="vertical"
+        android:text="@string/txtResultado"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgDados"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="154dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtResultado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barraFuerza" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

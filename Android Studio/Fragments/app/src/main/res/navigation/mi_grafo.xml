@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mi_grafo"
+    app:startDestination="@id/inicioFragment">
+
+    <fragment
+        android:id="@+id/marcadorFragment"
+        android:name="mc.fragments.MarcadorFragment"
+        android:label="fragment_marcador"
+        tools:layout="@layout/fragment_marcador" >
+        <action
+            android:id="@+id/action_marcadorFragment_to_finFragment"
+            app:destination="@id/finFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/finFragment"
+        android:name="mc.fragments.FinFragment"
+        android:label="fragment_fin"
+        tools:layout="@layout/fragment_fin" />
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="mc.fragments.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" >
+        <action
+            android:id="@+id/action_infoFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="mc.fragments.InicioFragment"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_inicioFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+        <action
+            android:id="@+id/action_inicioFragment_to_marcadorFragment"
+            app:destination="@id/marcadorFragment" />
+    </fragment>
+</navigation>
